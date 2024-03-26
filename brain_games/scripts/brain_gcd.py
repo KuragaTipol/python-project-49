@@ -7,14 +7,14 @@ from random import randint
 def nod(a, b):
     while b:
         a, b = b, a % b
-    return a
+    return str(a)
 
 
 def gcd(name, counter):
     num1 = randint(1, 50)
     num2 = randint(1, 20)
     print(f'Question: {num1} {num2}')
-    answer = eval(prompt.string('Your answer: '))
+    answer = prompt.string('Your answer: ')
     result = nod(num1, num2)
 
     if answer == result:
@@ -24,8 +24,7 @@ def gcd(name, counter):
     else:
         print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{result}\'.')
         print(f'Let\'s try again, {name}!')
-        counter = 0
-        return counter
+        exit()
 
 
 def main():

@@ -14,10 +14,10 @@ def generate_progression():
 def game(name, counter):
     progression = generate_progression()
     num = randint(0, 9)
-    result = progression[num]
+    result = str(progression[num])
     progression[num] = '..'
     print('Question:', ' '.join(map(str, progression)))
-    answer = eval(prompt.string('Your answer: '))
+    answer = prompt.string('Your answer: ')
 
     if answer == result:
         print("Correct!")
@@ -26,8 +26,7 @@ def game(name, counter):
     else:
         print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{result}\'.')
         print(f'Let\'s try again, {name}!')
-        counter = 0
-        return counter
+        exit()
 
 
 def main():

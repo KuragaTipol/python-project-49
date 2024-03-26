@@ -26,28 +26,47 @@ def game(name, counter):
     answer = prompt.string('Your answer: ')
     result = is_prime(number)
 
-    if answer == 'yes':
-        if result:
+    if result:
+        if answer == 'yes':
             print('Correct!')
             counter += 1
             return counter
-        print(f'\'yes\' is wrong answer ;(. Correct answer was \'no\'.')
-        print(f'Let\'s try again, {name}!')
-        counter = 0
-        return counter
-    elif answer == 'no':
-        if not result:
-            print('Correct!')
-            counter += 1
-            return counter
-        print(f'\'no\' is wrong answer ;(. Correct answer was \'yes\'.')
-        print(f'Let\'s try again, {name}!')
-        counter = 0
-        return counter
+        else:
+            print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'yes\'.')
+            print(f'Let\'s try again, {name}!')
+            exit()
     else:
-        print('This is wrong answer!')
-        counter = 0
-        return counter
+        if answer == 'no':
+            print('Correct!')
+            counter += 1
+            return counter
+        else:
+            print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'no\'.')
+            print(f'Let\'s try again, {name}!')
+            exit()
+
+
+    # if answer == 'yes':
+    #     if result:
+    #         print('Correct!')
+    #         counter += 1
+    #         return counter
+    #     print(f'\'yes\' is wrong answer ;(. Correct answer was \'no\'.')
+    #     print(f'Let\'s try again, {name}!')
+    #     exit()
+    # elif answer == 'no':
+    #     if not result:
+    #         print('Correct!')
+    #         counter += 1
+    #         return counter
+    #     print(f'\'no\' is wrong answer ;(. Correct answer was \'yes\'.')
+    #     print(f'Let\'s try again, {name}!')
+    #     counter = 0
+    #     return counter
+    # else:
+    #     print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{result}\'.')
+    #     print(f'Let\'s try again, {name}!')
+    #     exit()
 
 
 def main():

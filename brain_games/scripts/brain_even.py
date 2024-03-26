@@ -8,28 +8,24 @@ def is_even(name, counter):
     rand = randint(1, 99)
     print(f'Question: {rand}')
     answer = prompt.string('Your answer: ')
-    if answer == 'yes':
-        if rand % 2 == 0:
+    if rand % 2 == 0:
+        if answer == 'yes':
             print('Correct!')
             counter += 1
             return counter
-        print(f'\'yes\' is wrong answer ;(. Correct answer was \'no\'.')
-        print(f'Let\'s try again, {name}!')
-        counter = 0
-        return counter
-    elif answer == 'no':
-        if rand % 2 == 1:
-            print('Correct!')
-            counter += 1
-            return counter
-        print(f'\'no\' is wrong answer ;(. Correct answer was \'yes\'.')
-        print(f'Let\'s try again, {name}!')
-        counter = 0
-        return counter
+        else:
+            print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'yes\'.')
+            print(f'Let\'s try again, {name}!')
+            exit()
     else:
-        print('This is wrong answer!')
-        counter = 0
-        return counter
+        if answer == 'no':
+            print('Correct!')
+            counter += 1
+            return counter
+        else:
+            print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'no\'.')
+            print(f'Let\'s try again, {name}!')
+            exit()
 
 
 def main():

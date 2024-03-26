@@ -10,7 +10,6 @@ from brain_games.cli import welcome_user
 #    print('Hello, {}!'.format(name))
 
 def main():
-    # print('poetry run brain games')
     print('Welcome to the Brain Games!')
     welcome_user()
 
