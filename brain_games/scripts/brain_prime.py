@@ -22,7 +22,7 @@ def is_prime(number):
 
 def game(name, counter):
     number = randint(1, 3600)
-    print('Question: ', {number})
+    print(f'Question: {number}')
     answer = prompt.string('Your answer: ')
     result = is_prime(number)
 
