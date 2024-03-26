@@ -24,7 +24,8 @@ def game(name, counter):
         counter += 1
         return counter
     else:
-        print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{result}\'.')
+        print(f'\'{answer}\' is wrong answer ;(. '
+              f'Correct answer was \'{result}\'.')
         print(f'Let\'s try again, {name}!')
         exit()
 
@@ -33,7 +34,7 @@ def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
-    print(f'What number is missing in the progression?')
+    print('What number is missing in the progression?')
     counter = 0
     while counter < 3:
         counter = game(name, counter)

@@ -14,7 +14,8 @@ def is_even(name, counter):
             counter += 1
             return counter
         else:
-            print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'yes\'.')
+            print(f'\'{answer}\' is wrong answer ;(. '
+                  f'Correct answer was \'yes\'.')
             print(f'Let\'s try again, {name}!')
             exit()
     else:
@@ -23,7 +24,8 @@ def is_even(name, counter):
             counter += 1
             return counter
         else:
-            print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'no\'.')
+            print(f'\'{answer}\' is wrong answer ;(. '
+                  f'Correct answer was \'no\'.')
             print(f'Let\'s try again, {name}!')
             exit()
 
@@ -32,7 +34,7 @@ def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
-    print(f'Answer "yes" if the number is even, otherwise answer "no".')
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     counter = 0
     while counter < 3:
         counter = is_even(name, counter)
