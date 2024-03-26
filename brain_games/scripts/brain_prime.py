@@ -22,7 +22,7 @@ def is_prime(number):
 
 def game(name, counter):
     number = randint(1, 3600)
-    print('Question: ', number)
+    print('Question: ', {number})
     answer = prompt.string('Your answer: ')
     result = is_prime(number)
 
@@ -44,29 +44,6 @@ def game(name, counter):
             print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'no\'.')
             print(f'Let\'s try again, {name}!')
             exit()
-
-
-    # if answer == 'yes':
-    #     if result:
-    #         print('Correct!')
-    #         counter += 1
-    #         return counter
-    #     print(f'\'yes\' is wrong answer ;(. Correct answer was \'no\'.')
-    #     print(f'Let\'s try again, {name}!')
-    #     exit()
-    # elif answer == 'no':
-    #     if not result:
-    #         print('Correct!')
-    #         counter += 1
-    #         return counter
-    #     print(f'\'no\' is wrong answer ;(. Correct answer was \'yes\'.')
-    #     print(f'Let\'s try again, {name}!')
-    #     counter = 0
-    #     return counter
-    # else:
-    #     print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{result}\'.')
-    #     print(f'Let\'s try again, {name}!')
-    #     exit()
 
 
 def main():
